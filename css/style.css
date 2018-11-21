@@ -1,0 +1,168 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
+.u-mb-4 {
+  margin-bottom: 4rem; }
+
+.u-mb-6 {
+  margin-bottom: 6rem; }
+
+.u-pr-lg {
+  padding-right: 26rem; }
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #0e1a35; }
+
+.main-header {
+  background: url("../img/header-graph.png") 50% 40% no-repeat, url("../img/header-grid.png") center top no-repeat, #0e1a35;
+  padding: 6.6rem 0 56rem 0;
+  position: relative; }
+  .main-header__navbar {
+    margin: 0 16rem;
+    margin-bottom: 15rem;
+    display: flex; }
+  .main-header__logo {
+    width: 26rem;
+    display: flex;
+    align-items: center; }
+  .main-header__nav {
+    margin-left: auto;
+    display: flex; }
+  .main-header__nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center; }
+  .main-header__nav-item:not(:last-child) {
+    margin-right: 5rem; }
+  .main-header__nav-link:link, .main-header__nav-link:visited {
+    font-size: 18px;
+    color: #fff;
+    text-decoration: none; }
+  .main-header__login-btn {
+    font-size: 18px;
+    text-decoration: none;
+    color: #5584ff;
+    padding: 1.2rem 4rem;
+    border-radius: 100px;
+    border: 1px solid #233a72; }
+  .main-header__promo {
+    text-align: center; }
+  .main-header__heading {
+    font-size: 4rem;
+    font-weight: 300;
+    color: #fff;
+    margin-bottom: 6rem; }
+  .main-header__sub-heading {
+    display: block;
+    font-size: 3.6rem;
+    font-weight: 400;
+    color: #8492af;
+    margin-top: 0.6rem; }
+  .main-header__preview-box {
+    position: absolute;
+    top: 60rem;
+    left: 50%;
+    transform: translateX(-50%); }
+    .main-header__preview-box::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 77%;
+      box-shadow: 0 -2rem 6rem #14244a;
+      z-index: -1; }
+
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  padding: 1.5rem 6rem;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: #5584ff;
+  border-radius: 100px; }
+
+.section-features {
+  padding: 26rem 0 4rem 0; }
+
+.features-list {
+  list-style: none;
+  max-width: 140rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around; }
+  .features-list__item {
+    max-width: 40rem;
+    text-align: center;
+    position: relative; }
+    .features-list__item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 4rem;
+      left: 80%;
+      width: 22rem;
+      height: 1px;
+      background-color: #dadee7; }
+  .features-list__icon {
+    width: 8rem;
+    display: inline-block;
+    margin-bottom: 6rem; }
+  .features-list__heading {
+    color: #0e1a35;
+    font-size: 24px;
+    margin-bottom: 3rem; }
+  .features-list__paragraph {
+    color: #8492af;
+    font-size: 1.8rem;
+    margin-bottom: 5.5rem; }
+  .features-list__btn:link, .features-list__btn:visited {
+    color: #0e1a35;
+    font-size: 1.8rem;
+    text-decoration: none;
+    padding: 1.4rem 8.6rem;
+    border: 1px solid #dadee7;
+    border-radius: 100px; }
+
+.section-description {
+  padding: 26rem;
+  padding-top: 20rem;
+  background: url("../img/description-image.png") 100% 18rem no-repeat, linear-gradient(to bottom, #fff 0%, #fff 20%, #f6f7fa); }
+  .section-description__container {
+    max-width: 80rem; }
+  .section-description__heading {
+    font-size: 5.6rem;
+    font-weight: 100;
+    margin-bottom: 6rem; }
+  .section-description .checked-list {
+    list-style: none; }
+    .section-description .checked-list__item {
+      font-size: 2rem;
+      color: #5584ff;
+      display: flex;
+      align-items: center; }
+      .section-description .checked-list__item::before {
+        content: '';
+        background: url("../img/icon-checked.png") center no-repeat;
+        width: 3rem;
+        height: 3rem;
+        margin-right: 2rem; }
+      .section-description .checked-list__item:not(:last-child) {
+        margin-bottom: 3.5rem; }
+
+.paragraph {
+  font-size: 1.6rem;
+  color: #8492af;
+  -webkit-hyphens: auto;
+  hyphens: auto; }
