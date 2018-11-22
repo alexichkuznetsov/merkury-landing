@@ -113,6 +113,11 @@ body {
     }
 }
 
+.section-heading {
+    font-size: 5.6rem;
+    font-weight: 100;
+}
+
 .section-features {
     padding: 26rem 0 4rem 0;
 }
@@ -185,8 +190,6 @@ body {
         max-width: 80rem;
     }
     &__heading {
-        font-size: 5.6rem;
-        font-weight: 100;
         margin-bottom: 6rem;
     }
     .checked-list {
@@ -214,4 +217,155 @@ body {
     color: $color-blue-light-2;
     -webkit-hyphens: auto;
     hyphens: auto;
+}
+.section-drag-drop {
+    padding: 16rem 14rem;
+    background: url('../img/header-graph.png') center center no-repeat,
+        url('../img/header-grid.png') 50% 10% no-repeat, $color-primary;
+}
+.drag-drop {
+    &__container {
+        display: flex;
+    }
+    &__left-side {
+        display: flex;
+    }
+    &__in-progress {
+        max-width: 40rem;
+        margin-right: 5rem;
+    }
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 400;
+        color: $color-white;
+        margin-bottom: 2.5rem;
+        display: flex;
+        align-items: center;
+        &--arrow::after {
+            content: '';
+            margin-left: auto;
+            width: 3rem;
+            height: 3rem;
+            background: url('../img/arrow-right-nocircle.png') center right
+                no-repeat;
+        }
+        span {
+            color: $color-blue-light-2;
+        }
+    }
+    &__completed {
+        max-width: 40rem;
+    }
+    &__drop-here {
+        color: $color-blue-light-2;
+        border: 1px dashed $color-blue-light-2;
+        padding: 3rem 14rem;
+        font-size: 2rem;
+    }
+    &__right-side {
+        align-self: center;
+        padding: 0 18rem;
+        .section-heading {
+            color: $color-white;
+            margin-bottom: 4rem;
+        }
+    }
+    &__controls {
+        display: flex;
+    }
+    &__left-arrow {
+        margin-right: 2rem;
+    }
+}
+.task {
+    width: 38rem;
+    background-color: $color-white;
+    padding: 2.6rem 3rem;
+    display: flex;
+    position: relative;
+    &__label {
+        width: 4rem;
+        height: 4rem;
+        border-radius: 100px;
+        padding: 1rem;
+        font-size: 1.8rem;
+        background-color: $color-blue-1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 2rem;
+    }
+    &__name {
+        font-size: 1.4rem;
+        margin-bottom: 1px;
+    }
+    &__time-left {
+        font-size: 1.2rem;
+        color: $color-grey;
+        display: flex;
+        align-items: center;
+        &::before {
+            content: '';
+            width: 1.5rem;
+            height: 1.5rem;
+            background-image: url('../img/clock.png');
+            background-size: cover;
+            margin-right: 0.5rem;
+        }
+        &--enough {
+            color: $color-grey;
+        }
+        &--delay {
+            color: $color-red;
+            &::before {
+                background-image: url('../img/clock-red.png');
+            }
+        }
+        &--completed {
+            color: $color-green;
+            &::before {
+                background-image: url('../img/checkbox-green.png');
+            }
+        }
+    }
+    &__dots-btn {
+        margin-left: auto;
+        width: 5px;
+        display: flex;
+        align-items: center;
+    }
+    &__dot {
+        position: relative;
+        &,
+        &::before,
+        &::after {
+            width: 5px;
+            height: 5px;
+            background-color: $color-grey;
+            border-radius: 50%;
+            display: block;
+        }
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+        }
+        &::before {
+            top: -1rem;
+        }
+        &::after {
+            top: 1rem;
+        }
+    }
+    &--positioned {
+        position: relative;
+        top: 3rem;
+        left: 3rem;
+    }
+    &__hand-image {
+        position: absolute;
+        bottom: -5rem;
+        right: -4.2rem;
+    }
 }
