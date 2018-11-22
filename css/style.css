@@ -23,8 +23,14 @@ body {
 .u-mb-6 {
   margin-bottom: 6rem; }
 
+.u-mb-8 {
+  margin-bottom: 8rem; }
+
 .u-pr-lg {
   padding-right: 26rem; }
+
+.u-text-center {
+  text-align: center; }
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -93,12 +99,13 @@ body {
 .btn:link,
 .btn:visited {
   display: inline-block;
-  padding: 1.5rem 6rem;
+  padding: 1.2rem 6rem;
   font-size: 1.8rem;
   text-decoration: none;
   color: #fff;
   background-color: #5584ff;
-  border-radius: 100px; }
+  border-radius: 100px;
+  min-width: 20.5rem; }
 
 .section-heading {
   font-size: 5.6rem;
@@ -359,3 +366,79 @@ body {
   .preview__paragraph {
     font-size: 1.6rem;
     color: #8492af; }
+
+.section-pricing {
+  padding-bottom: 10rem; }
+  .section-pricing__cta {
+    font-size: 1.8rem;
+    color: #8492af;
+    max-width: 90rem;
+    padding: 0 1rem;
+    margin: 0 auto;
+    margin-bottom: 6rem; }
+  .section-pricing__btn-box {
+    width: 78rem;
+    margin: 0 auto;
+    position: relative; }
+    .section-pricing__btn-box::before, .section-pricing__btn-box::after {
+      content: '';
+      display: block;
+      width: 22rem;
+      height: 1px;
+      background-color: #dadee7;
+      position: absolute;
+      top: 50%; }
+    .section-pricing__btn-box::before {
+      left: 2rem; }
+    .section-pricing__btn-box::after {
+      right: 2rem; }
+
+.pricing-list {
+  list-style: none;
+  max-width: 140rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 10rem; }
+  .pricing-list__item {
+    min-width: 36rem;
+    background-color: #fff;
+    box-shadow: 0 0 7rem rgba(0, 0, 0, 0.2);
+    padding: 4.5rem 5rem; }
+    .pricing-list__item-title {
+      font-size: 2.4rem;
+      color: #0e1a35;
+      text-transform: uppercase;
+      margin-bottom: 1.4rem; }
+    .pricing-list__item-price {
+      margin-bottom: 2rem; }
+  .pricing-list__usd {
+    font-size: 4rem; }
+  .pricing-list__price {
+    font-size: 7.2rem; }
+  .pricing-list__period {
+    font-size: 2.4rem;
+    color: #8492af; }
+
+.offers {
+  list-style: none;
+  text-align: center; }
+  .offers__item {
+    font-size: 1.8rem;
+    color: #8492af;
+    display: flex;
+    align-items: center; }
+    .offers__item:not(:last-child) {
+      margin-bottom: 1.6rem; }
+    .offers__item::before {
+      content: '';
+      width: 2.4rem;
+      height: 2.4rem;
+      margin-right: 1.4rem;
+      background-size: cover;
+      background-repeat: no-repeat; }
+    .offers__item--included::before {
+      background-image: url("../img/checkbox-blue.png"); }
+    .offers__item--not-included::before {
+      background-image: url("../img/not-included.png"); }

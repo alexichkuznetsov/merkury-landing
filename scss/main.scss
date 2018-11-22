@@ -102,12 +102,13 @@ body {
 .btn:link,
 .btn:visited {
     display: inline-block;
-    padding: 1.5rem 6rem;
+    padding: 1.2rem 6rem;
     font-size: 1.8rem;
     text-decoration: none;
     color: $color-white;
     background-color: $color-blue-1;
     border-radius: 100px;
+    min-width: 20.5rem;
 
     &--blue {
     }
@@ -443,5 +444,98 @@ body {
     &__paragraph {
         font-size: 1.6rem;
         color: $color-blue-light-2;
+    }
+}
+.section-pricing {
+    padding-bottom: 10rem;
+    &__cta {
+        font-size: 1.8rem;
+        color: $color-blue-light-2;
+        max-width: 90rem;
+        padding: 0 1rem;
+        margin: 0 auto;
+        margin-bottom: 6rem;
+    }
+    &__btn-box {
+        width: 78rem;
+        margin: 0 auto;
+        position: relative;
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 22rem;
+            height: 1px;
+            background-color: $color-blue-light-1;
+            position: absolute;
+            top: 50%;
+        }
+        &::before {
+            left: 2rem;
+        }
+        &::after {
+            right: 2rem;
+        }
+    }
+}
+.pricing-list {
+    list-style: none;
+    max-width: 140rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 10rem;
+    &__item {
+        min-width: 36rem;
+        background-color: $color-white;
+        box-shadow: 0 0 7rem rgba($color-black, 0.2);
+        padding: 4.5rem 5rem;
+        &-title {
+            font-size: 2.4rem;
+            color: $color-primary;
+            text-transform: uppercase;
+            margin-bottom: 1.4rem;
+        }
+        &-price {
+            margin-bottom: 2rem;
+        }
+    }
+    &__usd {
+        font-size: 4rem;
+    }
+    &__price {
+        font-size: 7.2rem;
+    }
+    &__period {
+        font-size: 2.4rem;
+        color: $color-blue-light-2;
+    }
+}
+.offers {
+    list-style: none;
+    text-align: center;
+    &__item {
+        font-size: 1.8rem;
+        color: $color-blue-light-2;
+        display: flex;
+        align-items: center;
+        &:not(:last-child) {
+            margin-bottom: 1.6rem;
+        }
+        &::before {
+            content: '';
+            width: 2.4rem;
+            height: 2.4rem;
+            margin-right: 1.4rem;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        &--included::before {
+            background-image: url('../img/checkbox-blue.png');
+        }
+        &--not-included::before {
+            background-image: url('../img/not-included.png');
+        }
     }
 }
