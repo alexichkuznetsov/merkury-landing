@@ -298,3 +298,64 @@ body {
     position: absolute;
     bottom: -5rem;
     right: -4.2rem; }
+
+.section-preview {
+  padding: 9rem 0;
+  text-align: center; }
+  .section-preview > .paragraph {
+    max-width: 100rem;
+    margin: 0 auto;
+    margin-bottom: 6rem; }
+
+.preview {
+  position: relative;
+  max-width: 100rem;
+  margin: 0 auto; }
+  .preview__image {
+    display: block;
+    width: 100%;
+    margin: 0 auto; }
+  .preview__label {
+    position: absolute;
+    width: 64rem; }
+    .preview__label::before, .preview__label::after {
+      content: '';
+      display: block;
+      position: absolute;
+      border-radius: 50%; }
+    .preview__label::before {
+      width: 3rem;
+      height: 3rem;
+      background-color: #5584ff;
+      z-index: 1; }
+    .preview__label::after {
+      width: 5rem;
+      height: 5rem;
+      background-color: rgba(85, 132, 255, 0.6); }
+    .preview__label--first {
+      top: 8rem;
+      right: 55rem;
+      text-align: left; }
+      .preview__label--first::before {
+        top: 1.8rem;
+        right: -1.8rem; }
+      .preview__label--first::after {
+        top: 0.8rem;
+        right: -2.8rem; }
+    .preview__label--second {
+      bottom: 15rem;
+      left: 55rem;
+      text-align: right; }
+      .preview__label--second::before {
+        top: 1.8rem;
+        left: -1.8rem; }
+      .preview__label--second::after {
+        top: 0.8rem;
+        left: -2.8rem; }
+  .preview__title {
+    font-size: 2.2rem;
+    color: #0e1a35;
+    border-bottom: 2px solid #5584ff; }
+  .preview__paragraph {
+    font-size: 1.6rem;
+    color: #8492af; }
