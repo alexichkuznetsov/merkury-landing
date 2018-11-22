@@ -62,14 +62,21 @@ body {
   .main-header__nav-link:link, .main-header__nav-link:visited {
     font-size: 18px;
     color: #fff;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: color 0.2s ease; }
+    .main-header__nav-link:link:hover, .main-header__nav-link:visited:hover {
+      color: rgba(255, 255, 255, 0.6); }
   .main-header__login-btn {
     font-size: 18px;
     text-decoration: none;
     color: #5584ff;
     padding: 1.2rem 4rem;
     border-radius: 100px;
-    border: 1px solid #233a72; }
+    border: 1px solid #233a72;
+    transition: background-color 0.2s ease, color 0.2s ease; }
+    .main-header__login-btn:hover {
+      background-color: #233a72;
+      color: #fff; }
   .main-header__promo {
     text-align: center; }
   .main-header__heading {
@@ -105,7 +112,34 @@ body {
   color: #fff;
   background-color: #5584ff;
   border-radius: 100px;
-  min-width: 20.5rem; }
+  min-width: 20.5rem;
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .btn:link::before,
+  .btn:visited::before {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    background-color: #5584ff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: transform 0.4s ease, opacity 0.4s ease; }
+  .btn:link:hover,
+  .btn:visited:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+    .btn:link:hover::before,
+    .btn:visited:hover::before {
+      transform: scaleX(1.6) scaleY(1.8);
+      opacity: 0; }
+  .btn:link:active,
+  .btn:visited:active {
+    transform: translateY(-1px); }
 
 .section-heading {
   font-size: 5.6rem;
@@ -150,7 +184,11 @@ body {
     text-decoration: none;
     padding: 1.4rem 8.6rem;
     border: 1px solid #dadee7;
-    border-radius: 100px; }
+    border-radius: 100px;
+    transition: background-color 0.3s ease;
+    display: inline-block; }
+    .features-list__btn:link:hover, .features-list__btn:visited:hover {
+      background-color: #dadee7; }
 
 .section-description {
   padding: 26rem;
@@ -231,15 +269,29 @@ body {
 .drag-drop__controls {
   display: flex; }
 
+.drag-drop__left-arrow, .drag-drop__right-arrow {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  backface-visibility: hidden; }
+
 .drag-drop__left-arrow {
   margin-right: 2rem; }
+  .drag-drop__left-arrow:hover {
+    transform: translateX(-3px); }
+
+.drag-drop__right-arrow:hover {
+  transform: translateX(3px); }
 
 .task {
   width: 38rem;
   background-color: #fff;
   padding: 2.6rem 3rem;
   display: flex;
-  position: relative; }
+  position: relative;
+  transition: transform 0.3s ease;
+  backface-visibility: hidden; }
+  .task:hover {
+    transform: translateY(-3px) scale(1.05); }
   .task__label {
     width: 4rem;
     height: 4rem;
@@ -343,7 +395,7 @@ body {
       top: 8rem;
       right: 55rem;
       text-align: left; }
-      .preview__label--first::before {
+      .preview__label--first::before, .preview__label--first::after {
         top: 1.8rem;
         right: -1.8rem; }
       .preview__label--first::after {
@@ -405,7 +457,12 @@ body {
     min-width: 36rem;
     background-color: #fff;
     box-shadow: 0 0 7rem rgba(0, 0, 0, 0.2);
-    padding: 4.5rem 5rem; }
+    padding: 4.5rem 5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    backface-visibility: hidden; }
+    .pricing-list__item:hover {
+      transform: translateY(-7px) scale(1.05);
+      box-shadow: 0 0 10rem rgba(0, 0, 0, 0.25); }
     .pricing-list__item-title {
       font-size: 2.4rem;
       color: #0e1a35;
@@ -458,7 +515,10 @@ body {
       margin-right: 4rem; }
     .main-footer__nav-link:link, .main-footer__nav-link:visited {
       text-decoration: none;
-      color: inherit; }
+      color: inherit;
+      transition: color 0.2s ease; }
+      .main-footer__nav-link:link:hover, .main-footer__nav-link:visited:hover {
+        color: rgba(132, 146, 175, 0.6); }
   .main-footer__social-links {
     list-style: none;
     display: flex; }
@@ -467,4 +527,8 @@ body {
   .main-footer__social-link svg {
     width: 2rem;
     height: 2rem;
-    fill: #8492af; }
+    fill: #8492af;
+    transition: fill 0.2s ease;
+    backface-visibility: hidden; }
+  .main-footer__social-link:hover svg {
+    fill: rgba(132, 146, 175, 0.6); }

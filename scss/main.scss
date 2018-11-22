@@ -51,6 +51,11 @@ body {
         font-size: 18px;
         color: $color-white;
         text-decoration: none;
+        transition: color 0.2s ease;
+
+        &:hover {
+            color: rgba($color-white, 0.6);
+        }
     }
 
     &__login-btn {
@@ -61,6 +66,13 @@ body {
         padding: 1.2rem 4rem;
         border-radius: 100px;
         border: 1px solid $color-blue-dark-2;
+
+        transition: background-color 0.2s ease, color 0.2s ease;
+
+        &:hover {
+            background-color: $color-blue-dark-2;
+            color: $color-white;
+        }
     }
 
     &__promo {
@@ -109,8 +121,36 @@ body {
     background-color: $color-blue-1;
     border-radius: 100px;
     min-width: 20.5rem;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 
-    &--blue {
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        border-radius: 100px;
+        background-color: $color-blue-1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    &:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+
+        &::before {
+            transform: scaleX(1.6) scaleY(1.8);
+            opacity: 0;
+        }
+    }
+
+    &:active {
+        transform: translateY(-1px);
     }
 }
 
@@ -173,6 +213,12 @@ body {
         padding: 1.4rem 8.6rem;
         border: 1px solid $color-blue-light-1;
         border-radius: 100px;
+        transition: background-color 0.3s ease;
+        display: inline-block;
+
+        &:hover {
+            background-color: $color-blue-light-1;
+        }
     }
 }
 
@@ -274,8 +320,22 @@ body {
     &__controls {
         display: flex;
     }
+    &__left-arrow,
+    &__right-arrow {
+        cursor: pointer;
+        transition: transform 0.3s ease;
+        backface-visibility: hidden;
+    }
     &__left-arrow {
         margin-right: 2rem;
+        &:hover {
+            transform: translateX(-3px);
+        }
+    }
+    &__right-arrow {
+        &:hover {
+            transform: translateX(3px);
+        }
     }
 }
 .task {
@@ -284,6 +344,11 @@ body {
     padding: 2.6rem 3rem;
     display: flex;
     position: relative;
+    transition: transform 0.3s ease;
+    backface-visibility: hidden;
+    &:hover {
+        transform: translateY(-3px) scale(1.05);
+    }
     &__label {
         width: 4rem;
         height: 4rem;
@@ -413,7 +478,8 @@ body {
             top: 8rem;
             right: 55rem;
             text-align: left;
-            &::before {
+            &::before,
+            &::after {
                 top: 1.8rem;
                 right: -1.8rem;
             }
@@ -491,6 +557,12 @@ body {
         background-color: $color-white;
         box-shadow: 0 0 7rem rgba($color-black, 0.2);
         padding: 4.5rem 5rem;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        backface-visibility: hidden;
+        &:hover {
+            transform: translateY(-7px) scale(1.05);
+            box-shadow: 0 0 10rem rgba($color-black, 0.25);
+        }
         &-title {
             font-size: 2.4rem;
             color: $color-primary;
@@ -557,6 +629,10 @@ body {
         &-link:visited {
             text-decoration: none;
             color: inherit;
+            transition: color 0.2s ease;
+            &:hover {
+                color: rgba($color-blue-light-2, 0.6);
+            }
         }
     }
     &__social-links {
@@ -571,6 +647,13 @@ body {
             width: 2rem;
             height: 2rem;
             fill: $color-blue-light-2;
+            transition: fill 0.2s ease;
+            backface-visibility: hidden;
+        }
+        &:hover {
+            svg {
+                fill: rgba($color-blue-light-2, 0.6);
+            }
         }
     }
 }
