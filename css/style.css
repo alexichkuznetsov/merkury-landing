@@ -442,3 +442,29 @@ body {
       background-image: url("../img/checkbox-blue.png"); }
     .offers__item--not-included::before {
       background-image: url("../img/not-included.png"); }
+
+.main-footer {
+  padding: 6rem 25rem;
+  background-color: #0e1a35;
+  color: #8492af;
+  font-size: 1.8rem;
+  display: flex; }
+  .main-footer__nav {
+    list-style: none;
+    display: flex;
+    margin-left: auto;
+    margin-right: 5rem; }
+    .main-footer__nav-item:not(:last-child) {
+      margin-right: 4rem; }
+    .main-footer__nav-link:link, .main-footer__nav-link:visited {
+      text-decoration: none;
+      color: inherit; }
+  .main-footer__social-links {
+    list-style: none;
+    display: flex; }
+  .main-footer__social-link:not(:last-child) {
+    margin-right: 2rem; }
+  .main-footer__social-link svg {
+    width: 2rem;
+    height: 2rem;
+    fill: #8492af; }

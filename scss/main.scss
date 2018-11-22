@@ -539,3 +539,38 @@ body {
         }
     }
 }
+.main-footer {
+    padding: 6rem 25rem;
+    background-color: $color-primary;
+    color: $color-blue-light-2;
+    font-size: 1.8rem;
+    display: flex;
+    &__nav {
+        list-style: none;
+        display: flex;
+        margin-left: auto;
+        margin-right: 5rem;
+        &-item:not(:last-child) {
+            margin-right: 4rem;
+        }
+        &-link:link,
+        &-link:visited {
+            text-decoration: none;
+            color: inherit;
+        }
+    }
+    &__social-links {
+        list-style: none;
+        display: flex;
+    }
+    &__social-link {
+        &:not(:last-child) {
+            margin-right: 2rem;
+        }
+        svg {
+            width: 2rem;
+            height: 2rem;
+            fill: $color-blue-light-2;
+        }
+    }
+}
